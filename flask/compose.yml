@@ -2,10 +2,10 @@ services:
   app:
     container_name: flask_01
     image: flask_app
-    # restart: always
     ports:
-      - 5050:5000
+      - "5050:5000"
     volumes:
-      - my-volume:/var/
+      - flask-data:/var/
+
 volumes:
-  my-volume:
+  flask-data:

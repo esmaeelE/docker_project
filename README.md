@@ -1,9 +1,24 @@
-# docker_project
+# docker_images
 
-Docker compose projects
+Ready-to-use Docker Compose setups and Dockerfiles for common services.
 
-Some daily used docker-compose and Dockerfile to create images stored here.
+## Projects
 
-## TODO
+| Directory | Description | Port |
+|-----------|-------------|------|
+| [flask/](flask/) | Minimal Flask app | `5050` |
+| [flask-docker/](flask-docker/) | Flask dev environment (multi-stage build) | `5000` |
+| [wordpress/](wordpress/) | WordPress + MariaDB | `9999` |
+| [code-server/](code-server/) | VS Code in the browser | `8443` |
 
-- Add more projects
+## Quick start
+
+```bash
+cd <project>
+cp .env.example .env   # if present — edit secrets
+docker compose up -d
+```
+
+## License
+
+GPL-3.0

@@ -1,32 +1,23 @@
-# flask dev environment with docker image
+# Flask Dev Environment
 
-Now you can develope on docker container
+Flask app with multi-stage Dockerfile for development.
 
 ## Run
 
 ```bash
 docker compose up -d
-docker compose up -d --remove-orphans
+```
+
+## Test
+
+```bash
+curl http://localhost:5000
+```
+
+## Teardown
+
+```bash
 docker compose down -v --remove-orphans
 ```
 
-# check API with curl and httpie
-
-```bash
-curl 127.0.0.1:5000
-```
-
-```bash
-apt install httpie
-http GET 127.0.0.1:5000/
-curl 127.0.0.1:5000/
-```
-
-httpie cli
-
-<https://httpie.io/docs/cli/examples>
-
----
-
-TODO
-convert to uv and system builder
+App available at `http://localhost:5000`.

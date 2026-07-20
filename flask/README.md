@@ -1,53 +1,24 @@
-# Flask simple project
+# Flask Simple
 
-[SOURCE](https://www.freecodecamp.org/news/how-to-dockerize-a-flask-app/)
+Minimal Flask app with Dockerfile and Compose.
 
-## Build
-
-```bash
-docker build .
-```
+[Source](https://www.freecodecamp.org/news/how-to-dockerize-a-flask-app/)
 
 ## Run
 
 ```bash
-docker run 
+# build + start
+docker compose up -d --build
+
+# stop
+docker compose down
 ```
 
-## Manage
+App available at `http://localhost:5050`.
 
-```bash
-docker ps
-docker ps -a
-docker image ls
-```
-
-```bash
-$ docker-compose -f docker-compose.yml ps
-  Name                Command               State                    Ports                  
---------------------------------------------------------------------------------------------
-flask_01   python3 -m flask run --hos ...   Up      0.0.0.0:5050->5000/tcp,:::5050->5000/tcp
-```
-
----
-
-```bash
-$ docker exec -it flask_01 ls -ltrh 
-total 8K     
--rw-r--r--    1 root     root         184 Jul 27 09:28 app.py
--rw-r--r--    1 root     root           6 Jul 27 09:29 requirements.txt
-```
-
-## Use podman instead of docker
+## Podman
 
 ```bash
 podman build . -t flask_app
-```
-
-```bash
-podman image ls
-```
-
-```bash
 podman run -d --name flask_test -p 5000:5000 flask_app
 ```
