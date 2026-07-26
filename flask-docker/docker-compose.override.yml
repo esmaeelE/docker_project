@@ -1,0 +1,6 @@
+services:
+  flask-app:
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_DEBUG=1

@@ -4,3 +4,7 @@
 
 # Docker
 *.log
+
+# Python
+__pycache__/
+*.pyc

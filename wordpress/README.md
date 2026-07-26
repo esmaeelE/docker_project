@@ -1,6 +1,6 @@
 # WordPress
 
-WordPress + MariaDB stack.
+WordPress + MariaDB + Nginx reverse proxy.
 
 ## Run
 

@@ -1,11 +1,21 @@
 # Flask Dev Environment
 
-Flask app with multi-stage Dockerfile for development.
+Flask app with multi-stage Dockerfile and hot-reload.
 
-## Run
+## Run (dev)
 
 ```bash
 docker compose up -d
+# or
+make up
+```
+
+Source changes auto-reload via `flask run --reload`.
+
+## Run (production)
+
+```bash
+docker compose -f compose.yml up -d --build
 ```
 
 ## Test
